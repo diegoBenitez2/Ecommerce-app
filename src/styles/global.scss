@@ -1,0 +1,28 @@
+@import './variables';
+@import './fonts';
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: clash-display, sans-serif;
+}
+
+// Color
+.color-primary { color: $primary; }
+.color-dark-primary { color: $dark-primary; }
+.color-light-gray { color: $light-gray; }
+.color-border-gray { color: $border-gray; }
+.color-white { color: $white; }
+.color-border-dark { color: $border-dark; }
+
+// Background
+.background-primary { background-color: $primary; }
+.background-dark-primary { background-color: $dark-primary; }
+.background-light-gray { background-color: $light-gray; }
+.background-border-gray { background-color: $border-gray; }
+.background-white { background-color: $white; }
+.background-border-dark { background-color: $border-dark; }
+

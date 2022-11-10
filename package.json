@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "npx eslint  ./src/**/*.jsx",
+    "lint:style": "npx stylelint ./src/**/*.scss",
     "prepare": "husky install"
   },
   "dependencies": {
