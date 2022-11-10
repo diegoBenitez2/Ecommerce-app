@@ -8,7 +8,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:prettier/recommended"
+        "prettier"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -18,14 +18,12 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "prettier"
+        "react"
     ],
     "ignorePatterns": ["**/*.config.js", "**/eslint.config.js"],
     "rules": {
         "no-console": ["error", { "allow": ["warn"] }],
         "react/prop-types": 0,
-        "react/react-in-jsx-scope": 0,
-        "prettier/prettier": 0
+        "react/react-in-jsx-scope": 0
     }
 }
