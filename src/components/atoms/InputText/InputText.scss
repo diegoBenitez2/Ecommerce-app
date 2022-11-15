@@ -1,0 +1,12 @@
+.InputText {
+  font-family: satoshi,system-ui,sans-serif;
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  &::placeholder {
+    color: #FFF;
+  }
+  &::focus {
+    outline: 0;
+  }
+}

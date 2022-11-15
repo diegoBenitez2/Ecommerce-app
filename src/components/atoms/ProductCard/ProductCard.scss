@@ -1,0 +1,36 @@
+.ProductCard {
+  text-decoration: none;
+  color: inherit;
+  &__container {
+    width: 305px;
+    position: relative;
+    &:hover .ProductCard__tap {
+      height: 50px;
+    }
+  }
+  &__picture {
+    max-width: 100%;
+    object-fit: contain;
+  }
+  &__info {
+    padding: 10px 0 0;
+  }
+  &__tap{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    background: rgba($color: #000000, $alpha: .3);
+    transition: height .5s ease;
+    will-change: height;
+    button {
+      border:0;
+      background: none;
+    }
+  }
+}

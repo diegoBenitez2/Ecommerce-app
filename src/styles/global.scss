@@ -1,6 +1,9 @@
 @import './variables';
 @import './fonts';
 
+html {
+  font-size: 16px;
+}
 body {
   margin: 0;
   display: flex;
@@ -25,4 +28,27 @@ body {
 .background-border-gray { background-color: $border-gray; }
 .background-white { background-color: $white; }
 .background-border-dark { background-color: $border-dark; }
+
+// font-size
+.h4 {
+  font-family: clash-display, system-ui, sans-serif;
+  font-size: $h4;
+}
+.display-3 {
+  font-family: satoshi, system-ui, sans-serif;
+  font-size: $display-3;
+}
+
+// helpers
+  .cr-pointer {
+    cursor: pointer;
+  }
+
+// Media queries
+
+@mixin media768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
 
