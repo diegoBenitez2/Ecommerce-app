@@ -23,7 +23,7 @@
     "ignorePatterns": ["**/*.config.js", "**/eslint.config.js"],
     "rules": {
         "semi": ["error"],
-        "no-console": ["error", { "allow": ["warn"] }],
+        "no-console": ["warn", { "allow": ["warn"] }],
         "react/prop-types": 0,
         "react/react-in-jsx-scope": 0
     }
