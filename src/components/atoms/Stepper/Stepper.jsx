@@ -1,14 +1,14 @@
 import './Stepper.scss';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
-const Stepper = ({ name, id, value, handleStep }) => {
+const Stepper = ({ name, id, value, onstep }) => {
   const handleMinusCount = () => {
     if (value > 0 ) {
-      handleStep(value - 1);
+      onstep({ value: value - 1, name });
     }
   };
   const handlePlusCount = () => {
-    handleStep(value + 1);
+    onstep({ value: value + 1, name });
   };
 
   return (
@@ -18,7 +18,7 @@ const Stepper = ({ name, id, value, handleStep }) => {
         onClick={handleMinusCount}>
           <FaMinus color='#CAC6DA' size='.8em' />
         </button>
-        <input type='number' id={id} name={name} value={value} />
+        <input type='number' id={id} name={name} value={value} onChange={() => {}} />
       <button 
         className='Stepper__controls'
         onClick={handlePlusCount}>

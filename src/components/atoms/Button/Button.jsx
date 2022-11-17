@@ -6,10 +6,12 @@ const Button = ({
   size='small', 
   iconColor, 
   background='border-dark', 
-  color='dark-primary'}) => {
+  color='dark-primary',
+  onclick}) => {
   return (
     <button
-      className={`Button Button--${size} background-${background} color-${color}`}>
+      className={`Button Button--${size} background-${background} color-${color}`}
+      onClick={onclick}>
       <span>{ text }</span>
       {
         iconColor && <FaAngleDown 

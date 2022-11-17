@@ -1,6 +1,16 @@
 import './InputText.scss';
 
-const InpuText = ({ value, name, id, background='border-dark', color='white' }) => {
+const InpuText = ({ 
+  value,
+  name,
+  id,
+  color='white',
+  background = 'border-dark',
+  oninput,
+}) => {
+  const handleInput = ({ target }) => {
+    oninput({ name, value: target.value });
+  };
   return (
       <input 
         type="text" 
@@ -8,7 +18,8 @@ const InpuText = ({ value, name, id, background='border-dark', color='white' }) 
         name={name} 
         value={value} 
         placeholder='type your text'
-        className={`InputText background-${background} color-${color}`}/>
+        className={`InputText background-${background} color-${color}`}
+        onInput={handleInput}/>
   );
 };
 

@@ -7,30 +7,39 @@ import ProductCard from "@atoms/ProductCard/ProductCard";
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [product, setProduct] = useState({
-    id: 1,
-    link: '#',
-    image: {
-      url: '',
-      alt: '',
+  const [form, setForm] = useState({
+    count: 0,
+    filter: '',
+    text: '',
+    product: {
+      id: 1,
+      link: '#',
+      image: {
+        url: '',
+        alt: '',
+      },
+      title: 'The Daily chair',
+      price: 250,
     },
-    title: 'The Daily chair',
-    price: 250,
   });
-  const handleCount = (step) => {
-    setCount(step);
+  const handleForm = (target) => {
+    // eslint-disable-next-line no-debugger
+    setForm({...form, 
+      [target.name]: target.value
+    });
   };
+
 
   return (
     <div className="App">
       <h1>Hello React</h1>
       <Button className="background-dark-primary" />
-      <Checkbox />
-      <InpuText />
-      <Stepper value={count} handleStep={handleCount} />
-      <FeatureCard />
-      <ProductCard info={product} addShoppingCard={setProduct} />
+      <Checkbox id='sofa' name='filter' onchange={handleForm} value={'Sofas'}/>
+      { form.filter }
+      <InpuText name='text' value={form.text} oninput={handleForm} />
+      <Stepper name='count' value={form.count} onstep={handleForm} />
+      <FeatureCard title='Esto es un titulo' desc='Esta es la descripcion de la la card.' />
+      <ProductCard  info={form.product} addShoppingCard={handleForm} />
     </div>
   );
 }
