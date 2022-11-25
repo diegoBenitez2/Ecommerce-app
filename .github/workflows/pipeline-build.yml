@@ -24,6 +24,7 @@ jobs:
       - name: Linter styles
         run: npm run lint:style
   unit-testing-components:
+    needs: install-node-modules-and-lint
     runs-on: ubuntu-18.04
     steps:
       - name: testing atoms components
