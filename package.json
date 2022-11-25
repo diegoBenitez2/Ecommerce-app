@@ -11,7 +11,7 @@
     "lint:style": "npx stylelint ./src/**/*.scss",
     "prepare": "husky install",
     "test": "jest --watchAll",
-    "test:single": " jest ./src/components/atoms/Checkbox/Checkbox.test.js --watch"
+    "test:single": " jest ./src/components/atoms/ProductCard/ProductCard.test.js --watch"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
@@ -25,8 +25,10 @@
     "@babel/preset-react": "^7.18.6",
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
+    "@testing-library/dom": "^8.19.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.2.3",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
