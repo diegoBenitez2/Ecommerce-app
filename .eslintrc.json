@@ -20,7 +20,7 @@
     "plugins": [
         "react"
     ],
-    "ignorePatterns": ["**/*.config.js", "**/eslint.config.js"],
+    "ignorePatterns": ["**/*.config.js", "**/eslint.config.js", "**/*.test.js"],
     "rules": {
         "semi": ["error"],
         "no-console": ["warn", { "allow": ["warn"] }],

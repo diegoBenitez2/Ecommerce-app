@@ -1,23 +1,43 @@
+@import '@/styles/mediaQueries.scss';
+
 .ProductCard {
   text-decoration: none;
   color: inherit;
   &__container {
-    max-width: 305px;
     position: relative;
+    min-width: 163px;
+    height: 288px;
+    display: flex;
+    flex-direction: column;
+    transition-property: min-width, height;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+    @include media768 {
+    min-width: 305px;
+    height: 462px;
+    }
     &:hover .ProductCard__tap {
       height: 50px;
     }
   }
+  
+  &__notImage {
+    max-width: 100%;
+    height: 100%;
+  }
   &__picture {
     max-width: 100%;
+    max-height: 69%;
+    height: auto;
     object-fit: contain;
+    @include media768 {
+      max-height: 80%;
+    } 
   }
   &__notImage {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
-    height: 375px;
   }
   &__info {
     &_desc, &_title {
@@ -40,7 +60,7 @@
     right: 0;
     overflow-y: hidden;
     background: rgba($color: #000000, $alpha: .3);
-    transition: height .5s ease;
+    transition: height .2s ease;
     will-change: height;
     button {
       border:0;

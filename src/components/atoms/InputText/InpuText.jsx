@@ -12,7 +12,8 @@ const InpuText = ({
     oninput({ name, value: target.value });
   };
   return (
-      <input 
+      <input
+        data-testid='input-custom'
         type="text" 
         id={id} 
         name={name} 

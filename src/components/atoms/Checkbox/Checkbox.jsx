@@ -20,7 +20,7 @@ const Checkbox = ({
         id={id} 
         name={name}
         value={value}
-        onChange={handleChange}/> 
+        onChange={handleChange} /> 
       <label htmlFor={id}>{label}</label>
     </div>
   );
