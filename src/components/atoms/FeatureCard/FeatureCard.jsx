@@ -11,27 +11,27 @@ const FeatureCard = ({
   let icon;
   switch (iconType) {
     case 'delivery':
-      icon = <FaShippingFast size='1.3em'  />;
+      icon = <FaShippingFast data-testid='icon' title='icon-feature-delivery'  size='1.3em'  />;
       break;
     case 'checkCircle':
-      icon = <FaRegCheckCircle size='1.3em'  />;
+      icon = <FaRegCheckCircle data-testid='icon' title='icon-feature-checkCircle' size='1.3em'  />;
       break;
     case 'creditCard': 
-      icon = <FaRegCreditCard size='1.3em'  />;
+      icon = <FaRegCreditCard data-testid='icon' title='icon-feature-creditCard' size='1.3em'  />;
     break;
     case 'recycled':
-      icon = <FaTree size='1.3em'  />;
+      icon = <FaTree data-testid='icon' title='icon-feature-recycled' size='1.3em'  />;
       break;
     default:
-      icon = <FaShippingFast size='1.3em'  />;
+      icon = <FaShippingFast data-testid='icon' title='icon-feature-recycled' size='1.3em'  />;
       break;
   }
   return (
-    <div className={`FeatureCard background-${background} color-${color}`}>
+    <article data-testid='feature-card' className={`FeatureCard background-${background} color-${color}`}>
       {icon}
       <h4 className='h4'>{ title }</h4>
       <p>{ desc }</p>
-    </div>
+    </article>
   );
 };
 

@@ -13,12 +13,12 @@ const Stepper = ({ name, id, value, onstep }) => {
 
   return (
     <div className='Stepper'>
-      <button 
+      <button
         className='Stepper__controls'
         onClick={handleMinusCount}>
           <FaMinus color='#CAC6DA' size='.8em' />
         </button>
-        <input type='number' id={id} name={name} value={value} onChange={() => {}} />
+        <input data-testid='stepper' type='number' id={id} name={name} value={value} onChange={() => {}} />
       <button 
         className='Stepper__controls'
         onClick={handlePlusCount}>
