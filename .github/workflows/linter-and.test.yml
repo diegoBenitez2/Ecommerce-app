@@ -6,7 +6,8 @@ on:
     - main
 
 jobs:
-  install-node-modules-and-lint:
+  lint-and-test:
+    name: Lint and unit testing
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout repo
@@ -23,10 +24,6 @@ jobs:
         run: npm run lint
       - name: Linter styles
         run: npm run lint:style
-  unit-testing-components:
-    needs: install-node-modules-and-lint
-    runs-on: ubuntu-18.04
-    steps:
       - name: testing atoms components
         run: npm run test:unit
 
