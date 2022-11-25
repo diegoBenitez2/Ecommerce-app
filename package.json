@@ -10,8 +10,8 @@
     "lint": "npx eslint  ./src/**/*.jsx",
     "lint:style": "npx stylelint ./src/**/*.scss",
     "prepare": "husky install",
-    "test": "jest --watchAll",
-    "test:single": " jest ./src/components/atoms/ProductCard/ProductCard.test.js --watch"
+    "test:unit": "jest",
+    "test:unit:single": " jest ./src/components/atoms/ProductCard/ProductCard.test.js --watch"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
