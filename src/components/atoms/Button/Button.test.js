@@ -13,16 +13,14 @@ describe('<Button>', () => {
                             text='Sign up' 
                             size='small' 
                             iconColor='#FFFFF' 
-                            background='border-dark'
-                            color='dark-primary' />); 
+                            style={'fifty'}/>); 
     
     const button = wrapper.getByTestId('btn-custom');
 
     // Assert
     expect(button).toBeDefined();
     expect(button).toHaveClass('Button--small');
-    expect(button).toHaveClass('background-border-dark');
-    expect(button).toHaveClass('color-dark-primary');
+    expect(button).toHaveClass('Button--fifty');
     expect(wrapper.getByText('Sign up')).toHaveTextContent('Sign up');
   });
   

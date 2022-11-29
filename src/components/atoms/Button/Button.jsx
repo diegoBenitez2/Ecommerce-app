@@ -5,13 +5,12 @@ const Button = ({
   text='Button', 
   size='small', 
   iconColor, 
-  background='border-dark', 
-  color='dark-primary', 
+  style,
   onclick}) => {
   return (
     <button
       data-testid='btn-custom'
-      className={`Button Button--${size} background-${background} color-${color}`}
+      className={`Button Button--${size} Button--${style}`}
       onClick={onclick}>
       <span>{ text }</span>
       {
