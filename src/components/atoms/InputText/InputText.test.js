@@ -11,16 +11,15 @@ describe('<InputText>', () => {
     let wrapper = render(<InpuText 
                             id='input-firstname'
                             name='firstname' 
-                            color='white'
                             value='Diego'
-                            background='border-black'/>);
+                            style={'primary'}/>);
 
     let input = wrapper.getByTestId('input-custom');
     
     //Assert
     expect(input).toHaveAttribute('id', 'input-firstname');
     expect(input).toHaveAttribute('name', 'firstname');
-    expect(input).toHaveClass('background-border-black color-white');
+    expect(input).toHaveClass('InputText InputText--primary');
     expect(input).toHaveDisplayValue('Diego');
   });
 
