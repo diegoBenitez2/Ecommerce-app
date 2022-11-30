@@ -39,5 +39,8 @@
     width: 95px;
     height: 48px;
   }
+  &:disabled {
+    opacity: .6;
+  }
 
 }
