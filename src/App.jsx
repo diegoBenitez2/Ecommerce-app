@@ -51,7 +51,7 @@ function App() {
       <SignUpMail
         name={'signUp'}
         value={form.signUp} 
-        oninput={handleForm} /> 
+        onInput={handleForm} /> 
     </div>
   );
 }
