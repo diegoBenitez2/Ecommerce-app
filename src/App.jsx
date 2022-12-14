@@ -4,13 +4,14 @@
 // import Stepper from "@atoms/Stepper/Stepper";
 // import FeatureCard from "@atoms/FeatureCard/FeatureCard";
 import ProductCard from "@atoms/ProductCard/ProductCard";
+import SignUpMail from "@molecules/SignUpMail/SignUpMail";
 import { useState } from "react";
 
 function App() {
   const [form, setForm] = useState({
     count: 0,
     filter: '',
-    text: '',
+    signUp: 'diego@email.com',
     product: {
       id: 1,
       link: '#',
@@ -47,6 +48,10 @@ function App() {
             urlImage='https://th.bing.com/th/id/R.586be63c1a0c3e1a295e5d2cef816705?rik=kZ2Z70hOiz8%2bNw&riu=http%3a%2f%2fwww.freepngimg.com%2fdownload%2fchair%2f44-chair-png-image.png&ehk=B6V7bRa2aaC%2feycSQYDyGP%2b3IsVn8LJ5VwFSePWQEEI%3d&risl=&pid=ImgRaw&r=0'
             altImage='chair image'
             addShoppingCard={handleForm} />
+      <SignUpMail
+        name={'signUp'}
+        value={form.signUp} 
+        onInput={handleForm} /> 
     </div>
   );
 }

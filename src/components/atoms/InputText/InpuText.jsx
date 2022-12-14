@@ -3,23 +3,19 @@ import './InputText.scss';
 const InpuText = ({ 
   value,
   name,
-  id,
-  type='text',
   style,
-  placeholder,
   oninput,
+  ...props
 }) => {
   const handleInput = ({ target }) => {
     oninput({ name, value: target.value });
   };
   return (
       <input
+        {...props}
         data-testid='input-custom'
-        type={type} 
-        id={id} 
-        name={name} 
-        value={value} 
-        placeholder={placeholder}
+        name={name}
+        value={value}
         className={`InputText InputText--${style}`}
         onInput={handleInput}/>
   );

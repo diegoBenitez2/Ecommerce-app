@@ -6,10 +6,12 @@ const Button = ({
   size='small', 
   iconColor, 
   style,
+  disabled,
   onclick}) => {
   return (
     <button
       data-testid='btn-custom'
+      disabled={disabled}
       className={`Button Button--${size} Button--${style}`}
       onClick={onclick}>
       <span>{ text }</span>
